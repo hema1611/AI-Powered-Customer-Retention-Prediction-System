@@ -1,0 +1,15 @@
+2026-04-05 14:36:49,536 - INFO - Before Train columns : (5634, 4) 
+ : Index(['SeniorCitizen_trim', 'tenure_trim', 'MonthlyCharges_trim',
+       'TotalCharges_mode_trim'],
+      dtype='str')
+2026-04-05 14:36:49,536 - INFO - Befor Test columns : (1409, 4) 
+ : Index(['SeniorCitizen_trim', 'tenure_trim', 'MonthlyCharges_trim',
+       'TotalCharges_mode_trim'],
+      dtype='str')
+2026-04-05 14:36:49,536 - INFO - Number of good columns : 3 : Index(['tenure_trim', 'MonthlyCharges_trim', 'TotalCharges_mode_trim'], dtype='str')
+2026-04-05 14:36:49,536 - INFO - Number of bad columns : 1 : Index(['SeniorCitizen_trim'], dtype='str')
+2026-04-05 14:36:49,536 - INFO - After Train columns : (5634, 3) 
+ : Index(['tenure_trim', 'MonthlyCharges_trim', 'TotalCharges_mode_trim'], dtype='str')
+2026-04-05 14:36:49,536 - INFO - After Test columns : (1409, 3) 
+ : Index(['tenure_trim', 'MonthlyCharges_trim', 'TotalCharges_mode_trim'], dtype='str')
+2026-04-05 14:36:49,536 - INFO - --------------------------Hypothesis Testing-----------------------

@@ -1,0 +1,209 @@
+2026-04-05 14:36:49,416 - INFO - Total data size: (7043, 21)
+2026-04-05 14:36:49,433 - INFO - null values : customerID          0
+gender              0
+SeniorCitizen       0
+Partner             0
+Dependents          0
+tenure              0
+PhoneService        0
+MultipleLines       0
+InternetService     0
+OnlineSecurity      0
+OnlineBackup        0
+DeviceProtection    0
+TechSupport         0
+StreamingTV         0
+StreamingMovies     0
+Contract            0
+PaperlessBilling    0
+PaymentMethod       0
+MonthlyCharges      0
+TotalCharges        0
+Churn               0
+dtype: int64
+2026-04-05 14:36:49,442 - INFO - Total data size: (7043, 22)
+2026-04-05 14:36:49,473 - INFO - Sample data :
+       customerID  gender  SeniorCitizen Partner Dependents  tenure  ... PaperlessBilling              PaymentMethod MonthlyCharges TotalCharges Churn network_provider
+0     7590-VHVEG  Female              0     Yes         No       1  ...              Yes           Electronic check          29.85        29.85    No           Airtel
+1     5575-GNVDE    Male              0      No         No      34  ...               No               Mailed check          56.95       1889.5    No             bsnl
+2     3668-QPYBK    Male              0      No         No       2  ...              Yes               Mailed check          53.85       108.15   Yes             bsnl
+3     7795-CFOCW    Male              0      No         No      45  ...               No  Bank transfer (automatic)          42.30      1840.75    No              jio
+4     9237-HQITU  Female              0      No         No       2  ...              Yes           Electronic check          70.70       151.65   Yes           Airtel
+...          ...     ...            ...     ...        ...     ...  ...              ...                        ...            ...          ...   ...              ...
+7038  6840-RESVB    Male              0     Yes        Yes      24  ...              Yes               Mailed check          84.80       1990.5    No             bsnl
+7039  2234-XADUH  Female              0     Yes        Yes      72  ...              Yes    Credit card (automatic)         103.20       7362.9    No               vi
+7040  4801-JZAZL  Female              0     Yes        Yes      11  ...              Yes           Electronic check          29.60       346.45    No           Airtel
+7041  8361-LTMKD    Male              1     Yes         No       4  ...              Yes               Mailed check          74.40        306.6   Yes             bsnl
+7042  3186-AJIEK    Male              0      No         No      66  ...              Yes  Bank transfer (automatic)         105.65       6844.5    No              jio
+
+[7043 rows x 22 columns]
+2026-04-05 14:36:49,477 - INFO - total null values : 
+  customerID          0
+gender              0
+SeniorCitizen       0
+Partner             0
+Dependents          0
+tenure              0
+PhoneService        0
+MultipleLines       0
+InternetService     0
+OnlineSecurity      0
+OnlineBackup        0
+DeviceProtection    0
+TechSupport         0
+StreamingTV         0
+StreamingMovies     0
+Contract            0
+PaperlessBilling    0
+PaymentMethod       0
+MonthlyCharges      0
+TotalCharges        0
+Churn               0
+network_provider    0
+dtype: int64
+2026-04-05 14:36:49,482 - INFO -  After changing the object to numeric the null values are :  
+ customerID           0
+gender               0
+SeniorCitizen        0
+Partner              0
+Dependents           0
+tenure               0
+PhoneService         0
+MultipleLines        0
+InternetService      0
+OnlineSecurity       0
+OnlineBackup         0
+DeviceProtection     0
+TechSupport          0
+StreamingTV          0
+StreamingMovies      0
+Contract             0
+PaperlessBilling     0
+PaymentMethod        0
+MonthlyCharges       0
+TotalCharges        11
+Churn                0
+network_provider     0
+dtype: int64
+2026-04-05 14:36:49,482 - INFO - Total data size: 
+ (7043, 22)
+2026-04-05 14:36:49,485 - INFO - Train divided Data size : 5634 : 5634
+2026-04-05 14:36:49,485 - INFO - Test divided Data size : 1409 : 1409
+2026-04-05 14:36:49,485 - INFO - total train data shape : (5634, 21)
+2026-04-05 14:36:49,485 - INFO - total test data shape: (1409, 21)
+2026-04-05 14:36:49,500 - INFO - Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_mode'], dtype='str') : (5634, 4)
+2026-04-05 14:36:49,500 - INFO - Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_mode'], dtype='str') : (1409, 4)
+2026-04-05 14:36:49,500 - INFO - =================================================================
+2026-04-05 14:36:49,500 - INFO - Index(['customerID', 'gender', 'Partner', 'Dependents', 'PhoneService',
+       'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup',
+       'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies',
+       'Contract', 'PaperlessBilling', 'PaymentMethod', 'network_provider'],
+      dtype='str') : (5634, 17)
+2026-04-05 14:36:49,500 - INFO - Index(['customerID', 'gender', 'Partner', 'Dependents', 'PhoneService',
+       'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup',
+       'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies',
+       'Contract', 'PaperlessBilling', 'PaymentMethod', 'network_provider'],
+      dtype='str') : (1409, 17)
+2026-04-05 14:36:49,583 - INFO - ------------------------------------------------
+2026-04-05 14:36:49,583 - INFO - Final Training data : (5634, 31)
+2026-04-05 14:36:49,583 - INFO - Index(['tenure_trim', 'MonthlyCharges_trim', 'TotalCharges_mode_trim',
+       'gender_Male', 'Partner_Yes', 'Dependents_Yes', 'PhoneService_Yes',
+       'MultipleLines_No phone service', 'MultipleLines_Yes',
+       'InternetService_Fiber optic', 'InternetService_No',
+       'OnlineSecurity_No internet service', 'OnlineSecurity_Yes',
+       'OnlineBackup_No internet service', 'OnlineBackup_Yes',
+       'DeviceProtection_No internet service', 'DeviceProtection_Yes',
+       'TechSupport_No internet service', 'TechSupport_Yes',
+       'StreamingTV_No internet service', 'StreamingTV_Yes',
+       'StreamingMovies_No internet service', 'StreamingMovies_Yes',
+       'PaperlessBilling_Yes', 'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check',
+       'network_provider_bsnl', 'network_provider_jio', 'network_provider_vi',
+       'Contract_od'],
+      dtype='str')
+2026-04-05 14:36:49,583 - INFO - tenure_trim                              0
+MonthlyCharges_trim                      0
+TotalCharges_mode_trim                   0
+gender_Male                              0
+Partner_Yes                              0
+Dependents_Yes                           0
+PhoneService_Yes                         0
+MultipleLines_No phone service           0
+MultipleLines_Yes                        0
+InternetService_Fiber optic              0
+InternetService_No                       0
+OnlineSecurity_No internet service       0
+OnlineSecurity_Yes                       0
+OnlineBackup_No internet service         0
+OnlineBackup_Yes                         0
+DeviceProtection_No internet service     0
+DeviceProtection_Yes                     0
+TechSupport_No internet service          0
+TechSupport_Yes                          0
+StreamingTV_No internet service          0
+StreamingTV_Yes                          0
+StreamingMovies_No internet service      0
+StreamingMovies_Yes                      0
+PaperlessBilling_Yes                     0
+PaymentMethod_Credit card (automatic)    0
+PaymentMethod_Electronic check           0
+PaymentMethod_Mailed check               0
+network_provider_bsnl                    0
+network_provider_jio                     0
+network_provider_vi                      0
+Contract_od                              0
+dtype: int64
+2026-04-05 14:36:49,583 - INFO - Final Testing data : (1409, 31)
+2026-04-05 14:36:49,583 - INFO - Index(['tenure_trim', 'MonthlyCharges_trim', 'TotalCharges_mode_trim',
+       'gender_Male', 'Partner_Yes', 'Dependents_Yes', 'PhoneService_Yes',
+       'MultipleLines_No phone service', 'MultipleLines_Yes',
+       'InternetService_Fiber optic', 'InternetService_No',
+       'OnlineSecurity_No internet service', 'OnlineSecurity_Yes',
+       'OnlineBackup_No internet service', 'OnlineBackup_Yes',
+       'DeviceProtection_No internet service', 'DeviceProtection_Yes',
+       'TechSupport_No internet service', 'TechSupport_Yes',
+       'StreamingTV_No internet service', 'StreamingTV_Yes',
+       'StreamingMovies_No internet service', 'StreamingMovies_Yes',
+       'PaperlessBilling_Yes', 'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check',
+       'network_provider_bsnl', 'network_provider_jio', 'network_provider_vi',
+       'Contract_od'],
+      dtype='str')
+2026-04-05 14:36:49,583 - INFO - tenure_trim                              0
+MonthlyCharges_trim                      0
+TotalCharges_mode_trim                   0
+gender_Male                              0
+Partner_Yes                              0
+Dependents_Yes                           0
+PhoneService_Yes                         0
+MultipleLines_No phone service           0
+MultipleLines_Yes                        0
+InternetService_Fiber optic              0
+InternetService_No                       0
+OnlineSecurity_No internet service       0
+OnlineSecurity_Yes                       0
+OnlineBackup_No internet service         0
+OnlineBackup_Yes                         0
+DeviceProtection_No internet service     0
+DeviceProtection_Yes                     0
+TechSupport_No internet service          0
+TechSupport_Yes                          0
+StreamingTV_No internet service          0
+StreamingTV_Yes                          0
+StreamingMovies_No internet service      0
+StreamingMovies_Yes                      0
+PaperlessBilling_Yes                     0
+PaymentMethod_Credit card (automatic)    0
+PaymentMethod_Electronic check           0
+PaymentMethod_Mailed check               0
+network_provider_bsnl                    0
+network_provider_jio                     0
+network_provider_vi                      0
+Contract_od                              0
+dtype: int64
+2026-04-05 14:36:49,583 - INFO - Number of Rows for good customer 1 : 1496
+2026-04-05 14:36:49,583 - INFO - Number of Rows for Bad customer 0 : 4138
+2026-04-05 14:36:49,583 - INFO - Before training data shape : (5634, 31)
+2026-04-05 14:36:52,318 - INFO - Number of Rows for good customer 1 : 4138
+2026-04-05 14:36:52,318 - INFO - Number of Rows for Bad customer 0 : 4138
+2026-04-05 14:36:52,318 - INFO - After training data shape : (8276, 31)
